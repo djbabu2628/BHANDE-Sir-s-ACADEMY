@@ -178,7 +178,7 @@
         </div>
         <!-- Right: Visual -->
         <div class="reveal-right">
-          <div class="relative">
+          <div class="relative overflow-hidden">
             <div class="rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-navy-900 to-navy-800 p-10 text-center">
               <div class="text-6xl md:text-8xl font-heading font-extrabold text-white/10 mb-4">BSA</div>
               <h3 class="text-xl font-heading font-bold text-white mb-2">BHANDE Sir's ACADEMY</h3>
@@ -284,21 +284,21 @@
       </div>
 
       <!-- Filters -->
-      <div class="flex flex-wrap gap-3 mb-8 items-center justify-between reveal" data-delay="100">
-        <div class="flex flex-wrap gap-3 flex-grow">
-          <div class="relative flex-grow max-w-xs">
+      <div class="flex flex-col sm:flex-row flex-wrap gap-3 mb-8 sm:items-center sm:justify-between reveal" data-delay="100">
+        <div class="flex flex-col sm:flex-row flex-wrap gap-3 flex-grow">
+          <div class="relative flex-grow sm:max-w-xs">
             <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">search</span>
-            <input type="text" id="results-search" placeholder="Search students..." class="form-input pl-10 h-10 text-sm" />
+            <input type="text" id="results-search" placeholder="Search students..." class="form-input pl-10 h-10 text-sm w-full" />
           </div>
-          <select id="results-course-filter" class="form-input h-10 text-sm w-auto min-w-[140px]">
+          <select id="results-course-filter" class="form-input h-10 text-sm w-full sm:w-auto">
             <option value="all">All Courses</option>
           </select>
-          <select id="results-year-filter" class="form-input h-10 text-sm w-auto min-w-[120px]">
+          <select id="results-year-filter" class="form-input h-10 text-sm w-full sm:w-auto">
             <option value="all">All Years</option>
           </select>
         </div>
         <div class="flex items-center gap-3">
-          <select id="results-sort" class="form-input h-10 text-sm w-auto min-w-[160px]">
+          <select id="results-sort" class="form-input h-10 text-sm w-full sm:w-auto">
             <option value="percentage-desc">Highest Marks First</option>
             <option value="percentage-asc">Lowest Marks First</option>
             <option value="name-asc">Name A-Z</option>
@@ -342,16 +342,16 @@
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">What Students Say</h2>
         <div class="section-divider"></div>
       </div>
-      <div id="testimonials-carousel" class="relative max-w-3xl mx-auto reveal" data-delay="100">
+      <div id="testimonials-carousel" class="relative max-w-3xl mx-auto reveal overflow-hidden px-2 sm:px-0" data-delay="100">
         <div class="overflow-hidden">
           <div id="testimonials-track" class="carousel-track">
             <!-- Rendered by JS -->
           </div>
         </div>
-        <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-navy-900 hover:shadow-lg transition-all">
+        <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-navy-900 hover:shadow-lg transition-all">
           <span class="material-symbols-outlined">chevron_left</span>
         </button>
-        <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-navy-900 hover:shadow-lg transition-all">
+        <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-navy-900 hover:shadow-lg transition-all">
           <span class="material-symbols-outlined">chevron_right</span>
         </button>
         <div class="carousel-dots"></div>
