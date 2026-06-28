@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — BHANDE Sir's ACADEMY</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#0A1628" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            navy: { 900: '#0A1628', 800: '#1B2D4F', 700: '#2A4A7A' },
+            steel: { 500: '#3A6EA5', 400: '#6B9BD2' },
+            gold: { 500: '#D4A843', 400: '#E8C97A' },
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="font-body bg-gray-50 text-gray-800 antialiased">
+  <div id="admin-app">
+    <!-- Rendered by admin.js -->
+    <div class="min-h-screen flex items-center justify-center">
+      <div class="animate-spin w-8 h-8 border-3 border-blue-500 border-t-transparent rounded-full"></div>
+    </div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

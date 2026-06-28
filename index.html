@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BHANDE Sir's ACADEMY (BSA) — Top Coaching Institute in Amravati</title>
+  <meta name="description" content="BSA is Amravati's leading coaching institute for 10th, 12th Board, NEET, MHT-CET, JEE & Polytechnic. 4.9★ Google rated. Est. 2008." />
+  <meta name="keywords" content="BSA, BHANDE Sir Academy, coaching institute Amravati, NEET coaching, MHT-CET, JEE" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="BHANDE Sir's ACADEMY (BSA)" />
+  <meta property="og:description" content="Amravati's most trusted coaching institute since 2008." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0A1628" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Outfit', 'system-ui', 'sans-serif'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            navy: { 900: '#0A1628', 800: '#1B2D4F', 700: '#2A4A7A' },
+            steel: { 500: '#3A6EA5', 400: '#6B9BD2' },
+            gold: { 500: '#D4A843', 400: '#E8C97A' },
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="font-body bg-gray-50 text-gray-800 antialiased">
+
+  <!-- ═══════════ NOTICE BAR ═══════════ -->
+  <div id="notice-bar"></div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-gray-100/50" style="top:0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div id="nav-logo" class="w-10 h-10 rounded-xl bg-gradient-to-br from-navy-900 to-navy-800 flex items-center justify-center text-white font-heading font-bold text-lg shadow-md group-hover:shadow-lg transition-shadow">B</div>
+          <div>
+            <span id="nav-name" class="font-heading font-bold text-gray-900 text-sm md:text-base leading-tight block">BHANDE Sir's ACADEMY</span>
+            <span class="text-[10px] text-gray-500 font-medium tracking-wider uppercase hidden sm:block">Excellence in Education</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="#about" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">About</a>
+          <a href="#courses" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">Courses</a>
+          <a href="#facilities" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">Facilities</a>
+          <a href="#faculty" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">Faculty</a>
+          <a href="#results" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">Results</a>
+          <a href="#gallery" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">Gallery</a>
+          <a href="#faq" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">FAQ</a>
+          <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium text-gray-600 hover:text-navy-900 transition-colors rounded-lg hover:bg-gray-100">Contact</a>
+          <a href="#admission" class="ml-3 px-5 py-2.5 text-sm font-semibold text-white rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all btn-ripple" style="background:linear-gradient(135deg, var(--accent), var(--accent-light))">
+            Enroll Now
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100" aria-expanded="false" aria-label="Toggle menu">
+          <span class="material-symbols-outlined text-gray-700">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 shadow-lg">
+      <div class="px-4 py-3 space-y-1">
+        <a href="#about" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">About</a>
+        <a href="#courses" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Courses</a>
+        <a href="#facilities" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Facilities</a>
+        <a href="#faculty" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Faculty</a>
+        <a href="#results" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Results</a>
+        <a href="#gallery" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Gallery</a>
+        <a href="#faq" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">FAQ</a>
+        <a href="#contact" class="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Contact</a>
+        <a href="#admission" class="block px-3 py-2.5 text-sm font-semibold text-white rounded-xl text-center mt-2" style="background:linear-gradient(135deg, var(--accent), var(--accent-light))">Enroll Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO SECTION ═══════════ -->
+  <section id="hero-section" class="relative min-h-screen flex items-center overflow-hidden gradient-hero">
+    <!-- Floating Shapes -->
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-shape hero-shape-3"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40 relative z-10 w-full">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-blue-200 mb-6 animate-fade-in">
+          <span class="material-symbols-outlined text-base" style="color:var(--accent)">verified</span>
+          4.9★ Google Rated · Established 2008
+        </div>
+
+        <h1 id="hero-title" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
+          Your Future Begins Here
+        </h1>
+
+        <p id="hero-subtitle" class="text-lg md:text-xl text-blue-200 leading-relaxed mb-10 max-w-2xl animate-fade-in-up delay-200">
+          Amravati's most trusted coaching institute — guiding thousands of students to academic excellence since 2008.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-4 mb-16 animate-fade-in-up delay-300">
+          <a id="hero-cta1" href="#courses" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-navy-900 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all btn-ripple" style="background:linear-gradient(135deg, var(--accent), var(--accent-light))">
+            Explore Courses
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a id="hero-cta2" href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-white font-semibold border-2 border-white/20 hover:bg-white/10 transition-all">
+            Get In Touch
+            <span class="material-symbols-outlined">call</span>
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div id="hero-stats" class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Wave -->
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full">
+        <path d="M0 40L48 35C96 30 192 20 288 25C384 30 480 50 576 55C672 60 768 50 864 40C960 30 1056 20 1152 25C1248 30 1344 50 1392 60L1440 70V100H1392C1344 100 1248 100 1152 100C1056 100 960 100 864 100C768 100 672 100 576 100C480 100 384 100 288 100C192 100 96 100 48 100H0V40Z" fill="#F8FAFC"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT SECTION ═══════════ -->
+  <section id="about" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Left: Content -->
+        <div>
+          <div class="reveal">
+            <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">About Us</span>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+              Shaping Futures <span class="gradient-text">Since 2008</span>
+            </h2>
+            <div class="section-divider mx-0 mb-6"></div>
+          </div>
+          <p id="about-description" class="text-gray-600 leading-relaxed mb-6 reveal" data-delay="100">
+            One of Amravati's most trusted coaching institutes, providing quality education for 10th, 12th Board Exams, NEET, MHT-CET, JEE and BE/Polytechnic since 2008.
+          </p>
+          <div class="grid grid-cols-2 gap-4 reveal" data-delay="200">
+            <div class="p-4 rounded-xl bg-white shadow-sm">
+              <div class="text-2xl font-bold text-navy-900" data-counter="18" data-suffix="+" data-duration="2000">0</div>
+              <div class="text-sm text-gray-500">Years Experience</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white shadow-sm">
+              <div class="text-2xl font-bold text-navy-900" data-counter="15000" data-suffix="+" data-duration="2500">0</div>
+              <div class="text-sm text-gray-500">Students Coached</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white shadow-sm">
+              <div class="text-2xl font-bold text-navy-900" data-counter="4.9" data-suffix="★" data-duration="2000">0</div>
+              <div class="text-sm text-gray-500">Google Rating</div>
+            </div>
+            <div class="p-4 rounded-xl bg-white shadow-sm">
+              <div class="text-2xl font-bold text-navy-900" data-counter="95" data-suffix="%" data-duration="2000">0</div>
+              <div class="text-sm text-gray-500">Success Rate</div>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Visual -->
+        <div class="reveal-right">
+          <div class="relative">
+            <div class="rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-navy-900 to-navy-800 p-10 text-center">
+              <div class="text-6xl md:text-8xl font-heading font-extrabold text-white/10 mb-4">BSA</div>
+              <h3 class="text-xl font-heading font-bold text-white mb-2">BHANDE Sir's ACADEMY</h3>
+              <p class="text-blue-200 text-sm mb-6">Excellence in Education · Est. <span id="about-established">2008</span></p>
+              <div class="flex justify-center gap-3">
+                <span class="px-3 py-1 glass rounded-full text-xs text-blue-200">NEET</span>
+                <span class="px-3 py-1 glass rounded-full text-xs text-blue-200">MHT-CET</span>
+                <span class="px-3 py-1 glass rounded-full text-xs text-blue-200">JEE</span>
+                <span class="px-3 py-1 glass rounded-full text-xs text-blue-200">Board</span>
+              </div>
+            </div>
+            <!-- Decorative element -->
+            <div class="absolute -bottom-4 -right-4 w-24 h-24 rounded-xl bg-gradient-to-br from-gold-500 to-gold-400 opacity-20 animate-float-slow"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ COURSES SECTION ═══════════ -->
+  <section id="courses" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Our Programs</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Courses We Offer</h2>
+        <div class="section-divider"></div>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Comprehensive coaching programs designed to help students achieve academic excellence and crack competitive exams.</p>
+      </div>
+      <div id="courses-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FACILITIES SECTION ═══════════ -->
+  <section id="facilities" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Infrastructure</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Our Facilities</h2>
+        <div class="section-divider"></div>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">State-of-the-art facilities designed to provide the best learning environment for our students.</p>
+      </div>
+      <div id="facilities-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FACULTY SECTION ═══════════ -->
+  <section id="faculty" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Expert Team</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Our Faculty</h2>
+        <div class="section-divider"></div>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Learn from experienced educators who are passionate about student success.</p>
+      </div>
+      <div id="faculty-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ACHIEVEMENTS / STATS SECTION ═══════════ -->
+  <section id="achievements" class="py-20 gradient-hero relative overflow-hidden">
+    <div class="hero-shape hero-shape-1" style="opacity:.05"></div>
+    <div class="hero-shape hero-shape-2" style="opacity:.05"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-3">Our Achievements</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="text-center reveal" data-delay="0">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-white mb-2" data-counter="15000" data-suffix="+" data-duration="2500">0</div>
+          <p class="text-blue-200 text-sm">Students Trained</p>
+        </div>
+        <div class="text-center reveal" data-delay="150">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-white mb-2" data-counter="95" data-suffix="%" data-duration="2000">0</div>
+          <p class="text-blue-200 text-sm">Success Rate</p>
+        </div>
+        <div class="text-center reveal" data-delay="300">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-white mb-2" data-counter="18" data-suffix="+" data-duration="2000">0</div>
+          <p class="text-blue-200 text-sm">Years of Excellence</p>
+        </div>
+        <div class="text-center reveal" data-delay="450">
+          <div class="text-4xl md:text-5xl font-heading font-bold text-white mb-2" data-counter="50" data-suffix="+" data-duration="2000">0</div>
+          <p class="text-blue-200 text-sm">Awards & Honours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STUDENT RESULTS SECTION ═══════════ -->
+  <section id="results" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Top Performers</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Student Results</h2>
+        <div class="section-divider"></div>
+        <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Celebrating the achievements of our brilliant students across all courses.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap gap-3 mb-8 items-center justify-between reveal" data-delay="100">
+        <div class="flex flex-wrap gap-3 flex-grow">
+          <div class="relative flex-grow max-w-xs">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">search</span>
+            <input type="text" id="results-search" placeholder="Search students..." class="form-input pl-10 h-10 text-sm" />
+          </div>
+          <select id="results-course-filter" class="form-input h-10 text-sm w-auto min-w-[140px]">
+            <option value="all">All Courses</option>
+          </select>
+          <select id="results-year-filter" class="form-input h-10 text-sm w-auto min-w-[120px]">
+            <option value="all">All Years</option>
+          </select>
+        </div>
+        <div class="flex items-center gap-3">
+          <select id="results-sort" class="form-input h-10 text-sm w-auto min-w-[160px]">
+            <option value="percentage-desc">Highest Marks First</option>
+            <option value="percentage-asc">Lowest Marks First</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="year-desc">Newest First</option>
+          </select>
+          <span id="results-count" class="text-xs text-gray-500 whitespace-nowrap"></span>
+        </div>
+      </div>
+
+      <!-- Results Grid -->
+      <div id="results-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Pagination -->
+      <div id="results-pagination" class="mt-6">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ GALLERY SECTION ═══════════ -->
+  <section id="gallery" class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Campus Life</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Gallery</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div id="gallery-grid" class="masonry">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TESTIMONIALS SECTION ═══════════ -->
+  <section id="testimonials" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Testimonials</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">What Students Say</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div id="testimonials-carousel" class="relative max-w-3xl mx-auto reveal" data-delay="100">
+        <div class="overflow-hidden">
+          <div id="testimonials-track" class="carousel-track">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-navy-900 hover:shadow-lg transition-all">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-600 hover:text-navy-900 hover:shadow-lg transition-all">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+        <div class="carousel-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ SECTION ═══════════ -->
+  <section id="faq" class="py-20 md:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Help Center</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Frequently Asked Questions</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div id="faq-list" class="reveal" data-delay="100">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ADMISSION CTA SECTION ═══════════ -->
+  <section id="admission" class="py-20 gradient-hero relative overflow-hidden">
+    <div class="hero-shape hero-shape-1" style="opacity:.05"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="reveal">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Ready to Start Your Journey?</h2>
+        <p class="text-lg text-blue-200 mb-8 max-w-2xl mx-auto">Join thousands of successful students who trusted BSA. Admissions are now open for the 2025-26 batch.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-navy-900 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all btn-ripple" style="background:linear-gradient(135deg, var(--accent), var(--accent-light))">
+            <span class="material-symbols-outlined">school</span> Apply Now
+          </a>
+          <a href="tel:+919766577526" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-white font-semibold border-2 border-white/20 hover:bg-white/10 transition-all">
+            <span class="material-symbols-outlined">call</span> Call Us
+          </a>
+        </div>
+      </div>
+
+      <!-- Admission Steps -->
+      <div class="grid sm:grid-cols-3 gap-6 mt-16 reveal" data-delay="200">
+        <div class="glass p-6 rounded-xl text-center">
+          <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-lg font-bold" style="background:var(--accent);color:var(--primary)">1</div>
+          <h3 class="font-bold text-white mb-1">Enquire</h3>
+          <p class="text-sm text-blue-200">Call us or visit for course details</p>
+        </div>
+        <div class="glass p-6 rounded-xl text-center">
+          <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-lg font-bold" style="background:var(--accent);color:var(--primary)">2</div>
+          <h3 class="font-bold text-white mb-1">Counseling</h3>
+          <p class="text-sm text-blue-200">Get personalized guidance</p>
+        </div>
+        <div class="glass p-6 rounded-xl text-center">
+          <div class="w-12 h-12 rounded-full mx-auto mb-3 flex items-center justify-center text-lg font-bold" style="background:var(--accent);color:var(--primary)">3</div>
+          <h3 class="font-bold text-white mb-1">Enroll</h3>
+          <p class="text-sm text-blue-200">Complete registration & start</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT SECTION ═══════════ -->
+  <section id="contact" class="py-20 md:py-28 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-4" style="background:rgba(58,110,165,.1);color:var(--secondary)">Get In Touch</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-3">Contact Us</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Contact Info -->
+        <div class="card p-6 reveal">
+          <div class="space-y-5">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(58,110,165,.1)">
+                <span class="material-symbols-outlined text-lg" style="color:var(--secondary)">location_on</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Address</p>
+                <p id="contact-address" class="text-sm text-gray-600">Near Ekta Mahila Mandal Ground, Rathi Nagar, Gadge Nagar, Amravati – 444604</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(58,110,165,.1)">
+                <span class="material-symbols-outlined text-lg" style="color:var(--secondary)">call</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Phone</p>
+                <a id="contact-phone1-link" href="tel:+919766577526" class="text-sm text-gray-600 hover:text-blue-700 block"><span id="contact-phone1">+91 97665 77526</span></a>
+                <a id="contact-phone2-link" href="tel:+918511277344" class="text-sm text-gray-600 hover:text-blue-700 block"><span id="contact-phone2">+91 85112 77344</span></a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(58,110,165,.1)">
+                <span class="material-symbols-outlined text-lg" style="color:var(--secondary)">mail</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Email</p>
+                <a id="contact-email-link" href="mailto:bhandesirsacademy@gmail.com" class="text-sm text-gray-600 hover:text-blue-700"><span id="contact-email">bhandesirsacademy@gmail.com</span></a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(58,110,165,.1)">
+                <span class="material-symbols-outlined text-lg" style="color:var(--secondary)">schedule</span>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">Hours</p>
+                <p id="contact-hours" class="text-sm text-gray-600">6:00 AM – 10:00 PM</p>
+              </div>
+            </div>
+          </div>
+          <!-- Social Links -->
+          <div class="mt-6 pt-5 border-t border-gray-100">
+            <p class="text-sm font-semibold text-gray-700 mb-3">Follow Us</p>
+            <div id="social-links" class="flex gap-3">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div id="contact-map" class="min-h-[350px] rounded-xl overflow-hidden bg-gray-200 shadow-sm reveal-right">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="gradient-primary text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Institute Info -->
+        <div class="lg:col-span-2">
+          <h3 id="footer-name" class="text-xl font-heading font-bold mb-3">BHANDE Sir's ACADEMY</h3>
+          <p id="footer-description" class="text-sm text-blue-200 leading-relaxed mb-4 max-w-sm">One of Amravati's most trusted coaching institutes, providing quality education since 2008.</p>
+          <div class="flex items-center gap-2 px-3 py-2 glass rounded-lg w-fit">
+            <span class="text-lg" style="color:var(--accent)">★</span>
+            <span class="font-bold">4.9</span>
+            <span class="text-sm text-blue-200">Google Rating</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-heading font-bold mb-4 text-sm uppercase tracking-wider" style="color:var(--accent)">Quick Links</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#about" class="text-blue-200 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#courses" class="text-blue-200 hover:text-white transition-colors">Courses</a></li>
+            <li><a href="#results" class="text-blue-200 hover:text-white transition-colors">Results</a></li>
+            <li><a href="#gallery" class="text-blue-200 hover:text-white transition-colors">Gallery</a></li>
+            <li><a href="#contact" class="text-blue-200 hover:text-white transition-colors">Contact</a></li>
+            <li><a href="admin.html" class="text-blue-200 hover:text-white transition-colors">Admin</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-heading font-bold mb-4 text-sm uppercase tracking-wider" style="color:var(--accent)">Contact</h4>
+          <ul class="space-y-2.5 text-sm text-blue-200">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-base mt-0.5" style="color:var(--accent)">location_on</span>
+              Rathi Nagar, Gadge Nagar, Amravati
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-base" style="color:var(--accent)">call</span>
+              <a href="tel:+919766577526" class="hover:text-white transition-colors">+91 97665 77526</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-base" style="color:var(--accent)">schedule</span>
+              6 AM – 10 PM
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <p class="text-sm text-blue-200">© <span id="footer-year">2025</span> BHANDE Sir's ACADEMY. All rights reserved.</p>
+        <p class="text-xs text-blue-300/50">Crafted with ❤️ for BSA</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ FLOATING ELEMENTS ═══════════ -->
+  <!-- WhatsApp Button -->
+  <a id="whatsapp-float" href="#" target="_blank" rel="noopener" class="hidden fixed bottom-24 right-6 w-14 h-14 rounded-full bg-green-500 shadow-lg flex items-center justify-center text-white hover:bg-green-600 hover:scale-110 transition-all z-50 no-print" aria-label="Chat on WhatsApp">
+    <span class="material-symbols-outlined text-2xl">chat</span>
+  </a>
+
+  <!-- Back to Top -->
+  <button class="back-to-top no-print" aria-label="Back to top">
+    <span class="material-symbols-outlined">keyboard_arrow_up</span>
+  </button>
+
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <script src="js/utils.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
