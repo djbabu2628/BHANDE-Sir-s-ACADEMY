@@ -578,6 +578,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- Admin Sidebar ---------- */
 .admin-sidebar {
+  display: flex;
+  flex-direction: column;
   width: 260px;
   background: var(--primary);
   color: #fff;
@@ -605,6 +607,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ---------- Admin Table ---------- */
 .admin-table {
   width: 100%;
+  min-width: 1100px;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -618,11 +621,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: .05em;
   color: var(--text-muted);
   border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
 }
 .admin-table td {
   padding: 12px 16px;
   border-bottom: 1px solid #e2e8f0;
   font-size: .9rem;
+  white-space: nowrap;
 }
 .admin-table tr:hover td {
   background: #f7fafc;

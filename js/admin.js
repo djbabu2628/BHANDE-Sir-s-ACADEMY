@@ -66,12 +66,12 @@ const Admin = (() => {
 
     const sec = sections[section];
     main.innerHTML = `
-      <div class="flex items-center justify-between mb-8">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
         <div>
           <h1 class="text-2xl font-heading font-bold text-gray-900">${sec.title}</h1>
           <p class="text-sm text-gray-500 mt-1">Manage your ${sec.title.toLowerCase()}</p>
         </div>
-        <div id="section-actions"></div>
+        <div id="section-actions" class="w-full sm:w-auto"></div>
       </div>
       <div id="section-content"></div>
     `;
@@ -164,7 +164,7 @@ const Admin = (() => {
 
     content.innerHTML = `
       <form id="settings-form" class="space-y-8">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-4">Institute Information</h3>
           <div class="grid sm:grid-cols-2 gap-4">
             ${formField('name', 'Institute Name', info.name)}
@@ -197,7 +197,7 @@ const Admin = (() => {
           </div>
         </div>
 
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-4">Social Links</h3>
           <div class="grid sm:grid-cols-2 gap-4">
             ${formField('youtube', 'YouTube', social.youtube, 'url')}
@@ -252,7 +252,7 @@ const Admin = (() => {
 
     content.innerHTML = `
       <form id="hero-form" class="space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-4">Hero Content</h3>
           <div class="space-y-4">
             ${formField('title', 'Main Title', hero.title)}
@@ -279,7 +279,7 @@ const Admin = (() => {
           </div>
         </div>
 
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-4">Hero Statistics</h3>
           <div id="hero-stats-list" class="space-y-3">
             ${(hero.stats || []).map((s, i) => `
@@ -340,7 +340,7 @@ const Admin = (() => {
 
     // Add button
     actions.innerHTML = `
-      <button id="add-btn" class="px-4 py-2.5 rounded-xl text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
+      <button id="add-btn" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center justify-center sm:justify-start gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
         <span class="material-symbols-outlined text-lg">add</span> Add New
       </button>
     `;
@@ -580,7 +580,7 @@ const Admin = (() => {
     const actions = document.getElementById('section-actions');
 
     actions.innerHTML = `
-      <button id="add-result-btn" class="px-4 py-2.5 rounded-xl text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
+      <button id="add-result-btn" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center justify-center sm:justify-start gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
         <span class="material-symbols-outlined text-lg">add</span> Add Student
       </button>
     `;
@@ -608,26 +608,28 @@ const Admin = (() => {
       content.innerHTML = `
         <!-- Filters -->
         <div class="bg-white rounded-xl p-4 shadow-sm border border-gray-100 mb-4">
-          <div class="flex flex-wrap gap-3 items-center">
-            <div class="relative flex-grow max-w-xs">
+          <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+            <div class="relative w-full sm:max-w-xs">
               <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-base">search</span>
-              <input type="text" id="res-search" class="form-input pl-9 h-9 text-sm" placeholder="Search students..." value="${Utils.sanitizeHTML(searchTerm)}" />
+              <input type="text" id="res-search" class="form-input pl-9 h-9 text-sm w-full" placeholder="Search students..." value="${Utils.sanitizeHTML(searchTerm)}" />
             </div>
-            <select id="res-course" class="form-input h-9 text-sm w-auto">
-              <option value="all">All Courses</option>
-              ${courses.map(c => `<option value="${c}" ${filterCourse === c ? 'selected' : ''}>${c}</option>`).join('')}
-            </select>
-            <select id="res-year" class="form-input h-9 text-sm w-auto">
-              <option value="all">All Years</option>
-              ${years.map(y => `<option value="${y}" ${filterYear == y ? 'selected' : ''}>${y}</option>`).join('')}
-            </select>
-            <select id="res-sort" class="form-input h-9 text-sm w-auto">
-              <option value="percentage-desc" ${sortBy === 'percentage' && sortOrder === 'desc' ? 'selected' : ''}>Highest Marks</option>
-              <option value="percentage-asc" ${sortBy === 'percentage' && sortOrder === 'asc' ? 'selected' : ''}>Lowest Marks</option>
-              <option value="name-asc" ${sortBy === 'name' && sortOrder === 'asc' ? 'selected' : ''}>Name A-Z</option>
-              <option value="year-desc" ${sortBy === 'year' && sortOrder === 'desc' ? 'selected' : ''}>Newest</option>
-            </select>
-            <span class="text-xs text-gray-500 ml-auto">${result.total} students</span>
+            <div class="flex flex-wrap gap-2 w-full sm:w-auto">
+              <select id="res-course" class="form-input h-9 text-sm flex-grow sm:flex-initial w-full sm:w-auto">
+                <option value="all">All Courses</option>
+                ${courses.map(c => `<option value="${c}" ${filterCourse === c ? 'selected' : ''}>${c}</option>`).join('')}
+              </select>
+              <select id="res-year" class="form-input h-9 text-sm flex-grow sm:flex-initial w-full sm:w-auto">
+                <option value="all">All Years</option>
+                ${years.map(y => `<option value="${y}" ${filterYear == y ? 'selected' : ''}>${y}</option>`).join('')}
+              </select>
+              <select id="res-sort" class="form-input h-9 text-sm flex-grow sm:flex-initial w-full sm:w-auto">
+                <option value="percentage-desc" ${sortBy === 'percentage' && sortOrder === 'desc' ? 'selected' : ''}>Highest Marks</option>
+                <option value="percentage-asc" ${sortBy === 'percentage' && sortOrder === 'asc' ? 'selected' : ''}>Lowest Marks</option>
+                <option value="name-asc" ${sortBy === 'name' && sortOrder === 'asc' ? 'selected' : ''}>Name A-Z</option>
+                <option value="year-desc" ${sortBy === 'year' && sortOrder === 'desc' ? 'selected' : ''}>Newest</option>
+              </select>
+            </div>
+            <span class="text-xs text-gray-500 text-right sm:text-left sm:ml-auto">${result.total} students</span>
           </div>
         </div>
 
@@ -792,9 +794,9 @@ const Admin = (() => {
     const actions = document.getElementById('section-actions');
 
     actions.innerHTML = `
-      <div class="flex gap-2">
+      <div class="flex gap-2 w-full sm:w-auto">
         <input type="file" id="gallery-upload" accept="image/*" multiple class="hidden" />
-        <button onclick="document.getElementById('gallery-upload').click()" class="px-4 py-2.5 rounded-xl text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
+        <button onclick="document.getElementById('gallery-upload').click()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl text-white text-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center justify-center sm:justify-start gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
           <span class="material-symbols-outlined text-lg">add_photo_alternate</span> Upload Images
         </button>
       </div>
@@ -996,7 +998,7 @@ const Admin = (() => {
 
     content.innerHTML = `
       <form id="theme-form" class="space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-4">Color Palette</h3>
           <div class="grid sm:grid-cols-2 gap-6">
             ${colorFields.map(f => `
@@ -1042,7 +1044,7 @@ const Admin = (() => {
 
     content.innerHTML = `
       <form id="seo-form" class="space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-4">SEO Meta Tags</h3>
           <div class="space-y-4">
             ${formField('title', 'Page Title', seo.title)}
@@ -1069,25 +1071,25 @@ const Admin = (() => {
     const content = document.getElementById('section-content');
     content.innerHTML = `
       <div class="space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-2">Export Data</h3>
           <p class="text-sm text-gray-500 mb-4">Download all your site data as a JSON file for backup purposes.</p>
-          <button id="export-btn" class="px-6 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all flex items-center gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
+          <button id="export-btn" class="w-full sm:w-auto px-6 py-3 rounded-xl text-white font-semibold shadow-md hover:shadow-lg transition-all flex items-center justify-center sm:justify-start gap-2" style="background:linear-gradient(135deg, var(--secondary), var(--secondary-light))">
             <span class="material-symbols-outlined">download</span> Export All Data
           </button>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-gray-100">
           <h3 class="font-heading font-bold text-gray-900 mb-2">Import Data</h3>
           <p class="text-sm text-gray-500 mb-4">Restore data from a previously exported JSON backup file.</p>
           <input type="file" id="import-file" accept=".json" class="hidden" />
-          <button onclick="document.getElementById('import-file').click()" class="px-6 py-3 rounded-xl text-gray-700 font-semibold bg-gray-100 hover:bg-gray-200 transition-colors flex items-center gap-2">
+          <button onclick="document.getElementById('import-file').click()" class="w-full sm:w-auto px-6 py-3 rounded-xl text-gray-700 font-semibold bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center sm:justify-start gap-2">
             <span class="material-symbols-outlined">upload</span> Import Backup File
           </button>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+        <div class="bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-red-100">
           <h3 class="font-heading font-bold text-red-600 mb-2">⚠ Reset All Data</h3>
           <p class="text-sm text-gray-500 mb-4">This will delete all your customizations and restore the default data. This action cannot be undone.</p>
-          <button id="reset-all-btn" class="px-6 py-3 rounded-xl text-white font-semibold bg-red-500 hover:bg-red-600 shadow-md transition-all flex items-center gap-2">
+          <button id="reset-all-btn" class="w-full sm:w-auto px-6 py-3 rounded-xl text-white font-semibold bg-red-500 hover:bg-red-600 shadow-md transition-all flex items-center justify-center sm:justify-start gap-2">
             <span class="material-symbols-outlined">restart_alt</span> Reset to Defaults
           </button>
         </div>
@@ -1207,7 +1209,7 @@ const Admin = (() => {
         </aside>
 
         <!-- Main Content -->
-        <div class="flex-grow bg-gray-50 min-h-screen">
+        <div class="flex-grow bg-gray-50 min-h-screen min-w-0">
           <!-- Top Bar (Mobile) -->
           <div class="lg:hidden flex items-center justify-between p-4 bg-white border-b border-gray-100">
             <button id="sidebar-toggle" class="p-2 rounded-lg hover:bg-gray-100">
@@ -1235,7 +1237,7 @@ const Admin = (() => {
           </aside>
 
           <!-- Content Area -->
-          <div id="admin-main" class="p-6 md:p-8 max-w-6xl">
+          <div id="admin-main" class="p-4 sm:p-6 md:p-8 max-w-6xl">
             <!-- Rendered by navigateTo() -->
           </div>
         </div>
